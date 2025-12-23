@@ -89,3 +89,64 @@ form button {
 form button:hover {
   background-color: #555;
 }
+
+/* Variables */
+:root {
+  --color-primary: #333;
+  --color-secondary: #555;
+  --spacing: 1rem;
+  --font-base: 'Arial', sans-serif;
+}
+
+/* Base styles (mobile-first) */
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  line-height: 1.5;
+  color: var(--color-primary);
+}
+
+h1, h2, h3 {
+  margin: var(--spacing) 0;
+}
+
+/* Layout */
+header, footer {
+  padding: var(--spacing);
+  background-color: #f5f5f5;
+}
+
+/* Flexbox example */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+/* Project cards */
+.project-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+  }
+
+  .project-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
